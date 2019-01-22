@@ -4,7 +4,7 @@ import { ConfigsInterface } from './../lib/marech-helpers/interfaces/configs-int
 
 // Default names
 const defaultNames = {
-  filename: 'marechal-config',
+  filename: 'marech-config',
 };
 
 // Get default configs
