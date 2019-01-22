@@ -4,7 +4,7 @@ import functions from './functions';
 import marechHelpers from './marech-helpers';
 import padroes from './padroes';
 
-const itens = {
+const itens:{ [propName: string]:any; } = {
   disk,
   finalUser,
   functions,

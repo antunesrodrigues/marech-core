@@ -1,6 +1,6 @@
 import resolveFunction from './resolve-function';
 
-const itens = {
+const itens:{ [propName: string]:any; } = {
   resolveFunction,
 };
 

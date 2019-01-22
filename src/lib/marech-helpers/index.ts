@@ -12,7 +12,7 @@ import beforeAndAfterMatch from './general/before-and-after-match';
 import uxMarech from './general/ux-marech';
 
 // All itens
-const itens = {
+const itens:{ [propName: string]:any; } = {
   nameOrProps,
 
   attrToObj,

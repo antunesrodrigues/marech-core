@@ -1,12 +1,12 @@
 {
   "name": "marech-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Core of marech.",
   "license": "MIT",
   "main": "./dist/index.js",
   "scripts": {
     "lint": "echo 'Start Lint' && tslint --project tsconfig.json --config tslint.json src/**/*.ts --fix && echo 'End Lint'",
-    "compile": "npm run lint; echo 'Start Compilation' && tsc && echo 'End Compilation'"
+    "compile": "npm run lint; echo 'Start Compilation' && tsc --declaration && echo 'End Compilation'"
   },
   "devDependencies": {
     "typescript": "^3.2.4",

@@ -1,6 +1,6 @@
 import regExp from './reg-exp';
 
-const itens = {
+const itens:{ [propName: string]:any; } = {
   regExp,
 };
 

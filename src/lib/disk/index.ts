@@ -1,7 +1,7 @@
 import file from './file';
 import folder from './folder';
 
-const itens = {
+const itens:{ [propName: string]:any; } = {
   file,
   folder,
 };
