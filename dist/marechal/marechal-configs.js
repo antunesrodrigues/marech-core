@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 var defaultNames = {
-    filename: 'marechal-config',
+    filename: 'marech-config',
 };
 var defaultConfigs = function (input, output, teleg) {
     if (input === void 0) { input = 'src'; }
