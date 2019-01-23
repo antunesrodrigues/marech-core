@@ -10,8 +10,6 @@ const defaultNames = {
 // Get default configs
 const defaultConfigs = (input = 'src', output = 'dist', compnt = 'src/marech'):ConfigsInterface => {
   const configs = {
-    output,
-
     input: {
       path: input,
       files: '**/*.html',
@@ -19,8 +17,11 @@ const defaultConfigs = (input = 'src', output = 'dist', compnt = 'src/marech'):C
 
     components: {
       path: compnt,
-      filesByComponentName: true,
     },
+    output: {
+      path: output,
+    },
+
   };
   return configs;
 };
@@ -44,7 +45,7 @@ const resolveConfig = (config:object, dir = './'):ConfigsInterface => {
 
   resolvedConfigs.components.path = path.join(path.resolve(dir), resolvedConfigs.components.path);
   resolvedConfigs.input.path = path.join(path.resolve(dir), (resolvedConfigs.input.path));
-  resolvedConfigs.output = path.join(path.resolve(dir), resolvedConfigs.output);
+  resolvedConfigs.output.path = path.join(path.resolve(dir), resolvedConfigs.output.path);
 
   return resolvedConfigs;
 };

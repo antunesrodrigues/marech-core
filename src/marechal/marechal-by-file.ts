@@ -21,7 +21,7 @@ const byFileAndCreate = (workDir:string, file:string, relativeConfigs:CI, resolv
   // Get file name
   const fileName = path.join(file).replace(path.join(workDir, relativeConfigs.input.path), '');
   // Get full patch
-  const finalFileName = path.join(resolvedConfigs.output, path.normalize(fileName));
+  const finalFileName = path.join(resolvedConfigs.output.path, path.normalize(fileName));
 
   // Create folder if not exists
   lib.disk.folder.createPath(path.parse(finalFileName).dir);
