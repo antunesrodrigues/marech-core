@@ -3,7 +3,7 @@ declare const _default: {
     defaultNames: {
         filename: string;
     };
-    defaultConfigs: (input?: string, output?: string, teleg?: string) => ConfigsInterface;
+    defaultConfigs: (input?: string, output?: string, compnt?: string) => ConfigsInterface;
     simpleConfig: (confd: any) => ConfigsInterface;
     mergeConfigs: (userConfigs: ConfigsInterface) => {
         output: string;
@@ -11,9 +11,9 @@ declare const _default: {
             path: string;
             files: string;
         };
-        telegs: {
+        components: {
             path: string;
-            filesByTelegName?: boolean | undefined;
+            filesByComponentName?: boolean | undefined;
             files?: {
                 id: string;
                 file: string;

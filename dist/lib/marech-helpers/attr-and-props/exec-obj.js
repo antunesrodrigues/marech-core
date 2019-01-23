@@ -7,7 +7,7 @@ var attr_to_obj_1 = __importDefault(require("./attr-to-obj"));
 var reg_exp_1 = __importDefault(require("../../padroes/reg-exp"));
 var resolve_function_1 = __importDefault(require("../../functions/resolve-function"));
 var execObj = function (text, propes, prepropes) {
-    var finalTeleg = text;
+    var finalComponent = text;
     var props = propes;
     var flags = {};
     var finalFlags = {
@@ -36,10 +36,10 @@ var execObj = function (text, propes, prepropes) {
             tabs += ' ';
         }
     }
-    finalTeleg = finalTeleg.replace(/(?:\n|^)/g, "\n" + tabs);
-    finalTeleg = tabs + finalTeleg;
+    finalComponent = finalComponent.replace(/(?:\n|^)/g, "\n" + tabs);
+    finalComponent = tabs + finalComponent;
     var marechDefinition = '';
-    var findMarechDefinition = finalTeleg.match(reg_exp_1.default.marechDef);
+    var findMarechDefinition = finalComponent.match(reg_exp_1.default.marechDef);
     if (findMarechDefinition) {
         marechDefinition = findMarechDefinition[0];
     }
@@ -49,18 +49,18 @@ var execObj = function (text, propes, prepropes) {
             marechDefinition = marechDefinition.replace(e, resolve_function_1.default(e));
         });
     }
-    var findTelegArgs = marechDefinition.match(reg_exp_1.default.marechDefOnlyArgs);
-    var defaultTelegArgs = '';
-    if (findTelegArgs) {
-        defaultTelegArgs = attr_to_obj_1.default(findTelegArgs[0]);
+    var findComponentArgs = marechDefinition.match(reg_exp_1.default.marechDefOnlyArgs);
+    var defaultComponentArgs = '';
+    if (findComponentArgs) {
+        defaultComponentArgs = attr_to_obj_1.default(findComponentArgs[0]);
     }
     var args = attr_to_obj_1.default(props.replace(reg_exp_1.default.flags, ''));
-    finalTeleg = finalTeleg.replace(marechDefinition, '').trim();
+    finalComponent = finalComponent.replace(marechDefinition, '').trim();
     return {
         args: args,
-        defaultTelegArgs: defaultTelegArgs,
+        defaultComponentArgs: defaultComponentArgs,
         flags: flags,
-        marechTeleg: finalTeleg,
+        marechComponent: finalComponent,
     };
 };
 exports.default = execObj;

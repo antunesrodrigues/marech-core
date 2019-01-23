@@ -4,7 +4,7 @@ import resolveFunction from '../../functions/resolve-function';
 
 // Execute @... calls
 const execObj:Function = (text:string, propes:string, prepropes:{indent: (string|number)}) => {
-  let finalTeleg = text;
+  let finalComponent = text;
   let props = propes;
 
   let flags:{ [propName: string]: string; } = {};
@@ -51,15 +51,15 @@ const execObj:Function = (text:string, propes:string, prepropes:{indent: (string
     }
   }
   // Indent
-  finalTeleg = finalTeleg.replace(/(?:\n|^)/g, `\n${tabs}`);
-  finalTeleg = tabs + finalTeleg;
+  finalComponent = finalComponent.replace(/(?:\n|^)/g, `\n${tabs}`);
+  finalComponent = tabs + finalComponent;
   // END IDENTATION
   //
 
   // Find marech definition
   let marechDefinition = '';
 
-  const findMarechDefinition = finalTeleg.match(regExp.marechDef);
+  const findMarechDefinition = finalComponent.match(regExp.marechDef);
   if (findMarechDefinition) {
     marechDefinition = findMarechDefinition[0];
   }
@@ -73,25 +73,25 @@ const execObj:Function = (text:string, propes:string, prepropes:{indent: (string
   }
 
   // User's can define default attr if aren't defined
-  const findTelegArgs = marechDefinition.match(regExp.marechDefOnlyArgs);
+  const findComponentArgs = marechDefinition.match(regExp.marechDefOnlyArgs);
 
-  let defaultTelegArgs = '';
-  if (findTelegArgs) {
-    defaultTelegArgs = attrToObj(findTelegArgs[0]);
+  let defaultComponentArgs = '';
+  if (findComponentArgs) {
+    defaultComponentArgs = attrToObj(findComponentArgs[0]);
   }
 
   // Remove @ flags
   const args = attrToObj(props.replace(regExp.flags, ''));
 
-  // Remove marech definition from final teleg
-  finalTeleg = finalTeleg.replace(marechDefinition, '').trim();
+  // Remove marech definition from final component
+  finalComponent = finalComponent.replace(marechDefinition, '').trim();
 
   // Return data
   return {
     args,
-    defaultTelegArgs,
+    defaultComponentArgs,
     flags,
-    marechTeleg: finalTeleg,
+    marechComponent: finalComponent,
   };
 };
 

@@ -8,7 +8,7 @@ const defaultNames = {
 };
 
 // Get default configs
-const defaultConfigs = (input = 'src', output = 'dist', teleg = 'src/marech'):ConfigsInterface => {
+const defaultConfigs = (input = 'src', output = 'dist', compnt = 'src/marech'):ConfigsInterface => {
   const configs = {
     output,
 
@@ -17,9 +17,9 @@ const defaultConfigs = (input = 'src', output = 'dist', teleg = 'src/marech'):Co
       files: '**/*.html',
     },
 
-    telegs: {
-      path: teleg,
-      filesByTelegName: true,
+    components: {
+      path: compnt,
+      filesByComponentName: true,
     },
   };
   return configs;
@@ -27,8 +27,8 @@ const defaultConfigs = (input = 'src', output = 'dist', teleg = 'src/marech'):Co
 
 // Get 'default' configs with path changed
 const simpleConfig = (confd:any) => {
-  const { input, output, teleg } = confd;
-  return defaultConfigs(input, output, teleg);
+  const { input, output, component } = confd;
+  return defaultConfigs(input, output, component);
 };
 
 // Merge default configs with user configs
@@ -42,7 +42,7 @@ const mergeConfigs = (userConfigs:ConfigsInterface) => {
 const resolveConfig = (config:object, dir = './'):ConfigsInterface => {
   const resolvedConfigs = JSON.parse(JSON.stringify(config));
 
-  resolvedConfigs.telegs.path = path.join(path.resolve(dir), resolvedConfigs.telegs.path);
+  resolvedConfigs.components.path = path.join(path.resolve(dir), resolvedConfigs.components.path);
   resolvedConfigs.input.path = path.join(path.resolve(dir), (resolvedConfigs.input.path));
   resolvedConfigs.output = path.join(path.resolve(dir), resolvedConfigs.output);
 

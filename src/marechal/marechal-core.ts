@@ -4,12 +4,12 @@ interface ArgsType {
   [propName:string]: string;
 }
 
-const marechalCore = (telegHtml:string, args:ArgsType, defaultArgs:ArgsType = {}) => {
-  // Define final teleg
-  let finalTeleg = telegHtml;
+const marechalCore = (componentHtml:string, args:ArgsType, defaultArgs:ArgsType = {}) => {
+  // Define final component
+  let finalComponent = componentHtml;
 
   // Go to each {...}
-  const directives = finalTeleg.match(/{( *).+( *)}/g);
+  const directives = finalComponent.match(/{( *).+( *)}/g);
   if (directives) {
     for (let i = 0; i < directives.length; i += 1) {
       const directive = directives[i];
@@ -20,21 +20,21 @@ const marechalCore = (telegHtml:string, args:ArgsType, defaultArgs:ArgsType = {}
 
       const replace = argsDirective || defaultDirective || '';
 
-      finalTeleg = finalTeleg.replace(new RegExp(`${directive}`, 'g'), replace);
+      finalComponent = finalComponent.replace(new RegExp(`${directive}`, 'g'), replace);
     }
   }
 
   // Resolve JS outputs
-  const rjs = finalTeleg.match(/JS\(([^](?!(>)))*\)/g);
+  const rjs = finalComponent.match(/JS\(([^](?!(>)))*\)/g);
   if (rjs) {
     rjs.forEach((e) => {
-      finalTeleg = finalTeleg.replace(e, lib.functions.resolveFunction(e));
+      finalComponent = finalComponent.replace(e, lib.functions.resolveFunction(e));
     });
   }
 
   // Remove marech tag definition
-  finalTeleg = finalTeleg.replace(lib.padroes.regExp.marechDef, '').trimLeft();
-  return finalTeleg;
+  finalComponent = finalComponent.replace(lib.padroes.regExp.marechDef, '').trimLeft();
+  return finalComponent;
 };
 
 export default marechalCore;

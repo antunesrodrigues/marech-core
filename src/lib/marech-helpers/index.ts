@@ -5,7 +5,7 @@ import attrToObj from './attr-and-props/attr-to-obj';
 import execObj from './attr-and-props/exec-obj';
 
 // Files
-import findTelegName from './files/find-teleg-name';
+import findComponentName from './files/find-component-name';
 
 // General
 import beforeAndAfterMatch from './general/before-and-after-match';
@@ -18,7 +18,7 @@ const itens:{ [propName: string]:any; } = {
   attrToObj,
   execObj,
 
-  findTelegName,
+  findComponentName,
 
   beforeAndAfterMatch,
   uxMarech,

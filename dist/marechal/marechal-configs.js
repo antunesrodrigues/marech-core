@@ -18,26 +18,26 @@ var path_1 = __importDefault(require("path"));
 var defaultNames = {
     filename: 'marech-config',
 };
-var defaultConfigs = function (input, output, teleg) {
+var defaultConfigs = function (input, output, compnt) {
     if (input === void 0) { input = 'src'; }
     if (output === void 0) { output = 'dist'; }
-    if (teleg === void 0) { teleg = 'src/marech'; }
+    if (compnt === void 0) { compnt = 'src/marech'; }
     var configs = {
         output: output,
         input: {
             path: input,
             files: '**/*.html',
         },
-        telegs: {
-            path: teleg,
-            filesByTelegName: true,
+        components: {
+            path: compnt,
+            filesByComponentName: true,
         },
     };
     return configs;
 };
 var simpleConfig = function (confd) {
-    var input = confd.input, output = confd.output, teleg = confd.teleg;
-    return defaultConfigs(input, output, teleg);
+    var input = confd.input, output = confd.output, component = confd.component;
+    return defaultConfigs(input, output, component);
 };
 var mergeConfigs = function (userConfigs) {
     var mergedConfigs = __assign({}, defaultConfigs, userConfigs);
@@ -46,7 +46,7 @@ var mergeConfigs = function (userConfigs) {
 var resolveConfig = function (config, dir) {
     if (dir === void 0) { dir = './'; }
     var resolvedConfigs = JSON.parse(JSON.stringify(config));
-    resolvedConfigs.telegs.path = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.telegs.path);
+    resolvedConfigs.components.path = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.components.path);
     resolvedConfigs.input.path = path_1.default.join(path_1.default.resolve(dir), (resolvedConfigs.input.path));
     resolvedConfigs.output = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.output);
     return resolvedConfigs;

@@ -25,27 +25,27 @@ const marechalByData = (originalData:string, configs:ConfigsInterface) => {
       // Text after MarechTag definition
       const afterTag = lib.marechHelpers.beforeAndAfterMatch.after(finalData, match);
 
-      // Get Teleg name
+      // Get Component name
       const name = lib.marechHelpers.nameOrProps('name', match[0]);
       // Get Properties definition
       const props = lib.marechHelpers.nameOrProps('props', match[0]);
       // Pre-props (marech UX)
       const preProps = lib.marechHelpers.uxMarech(match[0], beforeAndTag);
 
-      // Find teleg file from Marech@... definition
-      const telegFile = lib.marechHelpers.findTelegName(name, configs);
-      // Read the teleg
-      const telegPath = path.join(configs.telegs.path, telegFile);
-      const originalMarechTeleg = lib.disk.file.readFile(telegPath);
+      // Find component file from Marech@... definition
+      const componentFile = lib.marechHelpers.findComponentName(name, configs);
+      // Read the component
+      const componentPath = path.join(configs.components.path, componentFile);
+      const originalMarechComponent = lib.disk.file.readFile(componentPath);
 
       // Split to content and args
-      const splitedItens = lib.marechHelpers.execObj(originalMarechTeleg, props, preProps);
-      const { marechTeleg, args, defaultTelegArgs } = splitedItens;
+      const splitedItens = lib.marechHelpers.execObj(originalMarechComponent, props, preProps);
+      const { marechComponent, args, defaultComponentArgs } = splitedItens;
 
       // MarechalCORE
-      const mareched = marechalCore(marechTeleg, args, defaultTelegArgs);
+      const mareched = marechalCore(marechComponent, args, defaultComponentArgs);
 
-      // Replace the <Marech@...> to imported teleg
+      // Replace the <Marech@...> to imported component
       finalData = beforeTag + mareched + afterTag;
     }
   }

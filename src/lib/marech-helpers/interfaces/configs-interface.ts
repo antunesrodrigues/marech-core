@@ -5,10 +5,10 @@ export interface ConfigsInterface {
     path:string,
     files:string,
   };
-  telegs: {
+  components: {
     path:string,
 
-    filesByTelegName?:boolean,
+    filesByComponentName?:boolean,
     // or
     files?: {id: string, file: string}[] ,
   };
