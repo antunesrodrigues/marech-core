@@ -23,14 +23,15 @@ var defaultConfigs = function (input, output, compnt) {
     if (output === void 0) { output = 'dist'; }
     if (compnt === void 0) { compnt = 'src/marech'; }
     var configs = {
-        output: output,
         input: {
             path: input,
             files: '**/*.html',
         },
         components: {
             path: compnt,
-            filesByComponentName: true,
+        },
+        output: {
+            path: output,
         },
     };
     return configs;
@@ -48,7 +49,7 @@ var resolveConfig = function (config, dir) {
     var resolvedConfigs = JSON.parse(JSON.stringify(config));
     resolvedConfigs.components.path = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.components.path);
     resolvedConfigs.input.path = path_1.default.join(path_1.default.resolve(dir), (resolvedConfigs.input.path));
-    resolvedConfigs.output = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.output);
+    resolvedConfigs.output.path = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.output.path);
     return resolvedConfigs;
 };
 exports.default = {

@@ -14,7 +14,7 @@ var byFile = function (file, relativeConfigs, resolvedConfigs) {
 var byFileAndCreate = function (workDir, file, relativeConfigs, resolvedConfigs) {
     var finalData = byFile(file, relativeConfigs, relativeConfigs);
     var fileName = path_1.default.join(file).replace(path_1.default.join(workDir, relativeConfigs.input.path), '');
-    var finalFileName = path_1.default.join(resolvedConfigs.output, path_1.default.normalize(fileName));
+    var finalFileName = path_1.default.join(resolvedConfigs.output.path, path_1.default.normalize(fileName));
     lib_1.default.disk.folder.createPath(path_1.default.parse(finalFileName).dir);
     lib_1.default.disk.file.createFile(finalFileName, finalData);
 };

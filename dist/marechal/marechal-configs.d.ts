@@ -6,18 +6,19 @@ declare const _default: {
     defaultConfigs: (input?: string, output?: string, compnt?: string) => ConfigsInterface;
     simpleConfig: (confd: any) => ConfigsInterface;
     mergeConfigs: (userConfigs: ConfigsInterface) => {
-        output: string;
         input: {
             path: string;
             files: string;
         };
         components: {
             path: string;
-            filesByComponentName?: boolean | undefined;
             files?: {
                 id: string;
                 file: string;
             }[] | undefined;
+        };
+        output: {
+            path: string;
         };
     };
     resolveConfig: (config: object, dir?: string) => ConfigsInterface;
