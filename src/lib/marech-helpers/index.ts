@@ -25,4 +25,4 @@ const itens:{ [propName: string]:any; } = {
 };
 
 // Export all
-export default itens;
+export =  itens;

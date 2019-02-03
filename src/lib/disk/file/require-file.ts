@@ -14,4 +14,4 @@ const requireFile = (file: string, json: boolean = false, message?: string) => {
   return parsed;
 };
 
-export default requireFile;
+export =  requireFile;

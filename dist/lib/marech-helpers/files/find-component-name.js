@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var findComponentFile = function (componentName, configs) {
     var file = componentName + ".html";
     if (configs.components.files) {
@@ -11,4 +10,4 @@ var findComponentFile = function (componentName, configs) {
     }
     return file;
 };
-exports.default = findComponentFile;
+module.exports = findComponentFile;

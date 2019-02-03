@@ -11,4 +11,4 @@ const verifyFile = (file: string) => {
   return true;
 };
 
-export default verifyFile;
+export =  verifyFile;

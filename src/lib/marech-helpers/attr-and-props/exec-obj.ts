@@ -95,4 +95,4 @@ const execObj:Function = (text:string, propes:string, prepropes:{indent: (string
   };
 };
 
-export default execObj;
+export =  execObj;

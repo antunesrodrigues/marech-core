@@ -17,4 +17,4 @@ const resolveFunction:Function = (fnTxt:string) => {
   return execFunct();
 };
 
-export default resolveFunction;
+export =  resolveFunction;

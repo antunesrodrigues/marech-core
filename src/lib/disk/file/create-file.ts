@@ -11,4 +11,4 @@ const createFile = (file: string, data: any) => {
   fs.writeFileSync(file, content);
 };
 
-export default createFile;
+export =  createFile;

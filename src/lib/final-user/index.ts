@@ -4,4 +4,4 @@ const itens:{ [propName: string]: (object); } = {
   sendError,
 };
 
-export default itens;
+export =  itens;

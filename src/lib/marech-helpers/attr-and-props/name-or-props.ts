@@ -20,4 +20,4 @@ const nameOrProps:Function = (mode:string, text:string) => {
   return '';
 };
 
-export default nameOrProps;
+export =  nameOrProps;

@@ -13,7 +13,6 @@ var __assign = (this && this.__assign) || function () {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 var defaultNames = {
     filename: 'marech-config',
@@ -52,7 +51,7 @@ var resolveConfig = function (config, dir) {
     resolvedConfigs.output.path = path_1.default.join(path_1.default.resolve(dir), resolvedConfigs.output.path);
     return resolvedConfigs;
 };
-exports.default = {
+module.exports = {
     defaultNames: defaultNames,
     defaultConfigs: defaultConfigs,
     simpleConfig: simpleConfig,

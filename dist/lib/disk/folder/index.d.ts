@@ -3,4 +3,4 @@ declare const _default: {
     existsPath: (location: string, message?: string) => boolean;
     createPath: (location: string) => boolean;
 };
-export default _default;
+export = _default;

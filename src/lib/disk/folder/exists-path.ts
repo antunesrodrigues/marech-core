@@ -9,4 +9,4 @@ const existsPath = (location: string, message: string = 'Path don\'t found') => 
   return true;
 };
 
-export default existsPath;
+export =  existsPath;

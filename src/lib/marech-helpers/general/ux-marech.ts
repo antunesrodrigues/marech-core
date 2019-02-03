@@ -26,4 +26,4 @@ const uxMarech:Function = (text:string, preText:string) => {
   };
 };
 
-export default uxMarech;
+export =  uxMarech;

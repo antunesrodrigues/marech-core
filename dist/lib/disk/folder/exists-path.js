@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var send_error_1 = __importDefault(require("../../final-user/error/send-error"));
 var verify_path_1 = __importDefault(require("./verify-path"));
 var existsPath = function (location, message) {
@@ -12,4 +11,4 @@ var existsPath = function (location, message) {
     }
     return true;
 };
-exports.default = existsPath;
+module.exports = existsPath;

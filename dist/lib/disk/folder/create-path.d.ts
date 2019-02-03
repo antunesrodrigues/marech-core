@@ -1,2 +1,2 @@
 declare const createPath: (location: string) => boolean;
-export default createPath;
+export = createPath;

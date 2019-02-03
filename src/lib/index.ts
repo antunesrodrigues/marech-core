@@ -12,4 +12,4 @@ const itens:{ [propName: string]:any; } = {
   padroes,
 };
 
-export default itens;
+export =  itens;

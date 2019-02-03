@@ -12,4 +12,4 @@ const readFile = (file: string) => {
 };
 
 // Read file
-export default readFile;
+export =  readFile;

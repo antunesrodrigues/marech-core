@@ -1,2 +1,2 @@
 declare const execObj: Function;
-export default execObj;
+export = execObj;

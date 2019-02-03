@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var lib_1 = __importDefault(require("../lib"));
 var marechalCore = function (componentHtml, args, defaultArgs) {
     if (defaultArgs === void 0) { defaultArgs = {}; }
@@ -27,4 +26,4 @@ var marechalCore = function (componentHtml, args, defaultArgs) {
     finalComponent = finalComponent.replace(lib_1.default.padroes.regExp.marechDef, '').trimLeft();
     return finalComponent;
 };
-exports.default = marechalCore;
+module.exports = marechalCore;

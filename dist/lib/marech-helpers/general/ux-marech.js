@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var uxMarech = function (text, preText) {
     var greatText = text;
     var whatsBad = ['+', '*', '(', ')'];
@@ -20,4 +19,4 @@ var uxMarech = function (text, preText) {
         indent: tab,
     };
 };
-exports.default = uxMarech;
+module.exports = uxMarech;

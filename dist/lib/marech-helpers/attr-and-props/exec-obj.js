@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var attr_to_obj_1 = __importDefault(require("./attr-to-obj"));
 var reg_exp_1 = __importDefault(require("../../padroes/reg-exp"));
 var resolve_function_1 = __importDefault(require("../../functions/resolve-function"));
@@ -63,4 +62,4 @@ var execObj = function (text, propes, prepropes) {
         marechComponent: finalComponent,
     };
 };
-exports.default = execObj;
+module.exports = execObj;

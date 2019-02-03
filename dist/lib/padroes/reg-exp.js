@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var regExp = {
     marechTag: /<Marech@(([^](?!<))*)(\/>|><\/Marech>)/gi,
     marechTagAttr: /(?<=<Marech@).*(?=(\/>|><\/Marech>))/i,
@@ -8,4 +7,4 @@ var regExp = {
     attr: /(?:^|[ ])([a-z]+)=("|')/gi,
     flags: /(?:^|[ ]) @.+=("|').*\1/g,
 };
-exports.default = regExp;
+module.exports = regExp;

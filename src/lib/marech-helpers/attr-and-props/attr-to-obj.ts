@@ -68,4 +68,4 @@ const attrToObj:Function = (attributes:string) => {
   return props;
 };
 
-export default attrToObj;
+export =  attrToObj;

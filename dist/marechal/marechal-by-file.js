@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 var lib_1 = __importDefault(require("../lib"));
 var marechal_by_text_1 = __importDefault(require("./marechal-by-text"));
@@ -18,7 +17,7 @@ var byFileAndCreate = function (workDir, file, relativeConfigs, resolvedConfigs)
     lib_1.default.disk.folder.createPath(path_1.default.parse(finalFileName).dir);
     lib_1.default.disk.file.createFile(finalFileName, finalData);
 };
-exports.default = {
+module.exports = {
     byFile: byFile,
     byFileAndCreate: byFileAndCreate,
 };

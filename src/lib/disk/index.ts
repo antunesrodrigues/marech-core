@@ -6,4 +6,4 @@ const itens:{ [propName: string]:any; } = {
   folder,
 };
 
-export default itens;
+export =  itens;

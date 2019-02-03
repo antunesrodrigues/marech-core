@@ -30,7 +30,7 @@ const byFileAndCreate = (workDir:string, file:string, relativeConfigs:CI, resolv
   lib.disk.file.createFile(finalFileName, finalData);
 };
 
-export default {
+export =  {
   byFile,
   byFileAndCreate,
 };

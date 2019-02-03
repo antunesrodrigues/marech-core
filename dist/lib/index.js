@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var disk_1 = __importDefault(require("./disk"));
 var final_user_1 = __importDefault(require("./final-user"));
 var functions_1 = __importDefault(require("./functions"));
@@ -15,4 +14,4 @@ var itens = {
     marechHelpers: marech_helpers_1.default,
     padroes: padroes_1.default,
 };
-exports.default = itens;
+module.exports = itens;

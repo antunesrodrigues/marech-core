@@ -4,4 +4,4 @@ const itens:{ [propName: string]:any; } = {
   resolveFunction,
 };
 
-export default itens;
+export =  itens;

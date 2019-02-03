@@ -9,4 +9,4 @@ const createPath = (location: string) => {
   return true;
 };
 
-export default createPath;
+export =  createPath;

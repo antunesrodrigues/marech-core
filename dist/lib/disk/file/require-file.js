@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 var send_error_1 = __importDefault(require("../../final-user/error/send-error"));
 var verify_file_1 = __importDefault(require("./verify-file"));
@@ -17,4 +16,4 @@ var requireFile = function (file, json, message) {
     var parsed = json ? JSON.parse(fileContent) : fileContent;
     return parsed;
 };
-exports.default = requireFile;
+module.exports = requireFile;

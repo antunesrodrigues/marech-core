@@ -23,4 +23,4 @@ declare const _default: {
     };
     resolveConfig: (config: object, dir?: string) => ConfigsInterface;
 };
-export default _default;
+export = _default;

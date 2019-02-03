@@ -4,4 +4,4 @@ declare const _default: {
     requireFile: (file: string, json?: boolean, message?: string | undefined) => any;
     createFile: (file: string, data: any) => void;
 };
-export default _default;
+export = _default;

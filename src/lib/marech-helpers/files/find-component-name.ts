@@ -14,4 +14,4 @@ const findComponentFile:Function = (componentName:string, configs:ConfigsInterfa
   return file;
 };
 
-export default findComponentFile;
+export =  findComponentFile;

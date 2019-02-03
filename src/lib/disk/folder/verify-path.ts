@@ -8,4 +8,4 @@ const verifyPath = (location: string) => {
   return exists;
 };
 
-export default verifyPath;
+export =  verifyPath;

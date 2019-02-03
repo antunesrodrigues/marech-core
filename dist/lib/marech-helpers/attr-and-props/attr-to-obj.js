@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var before_and_after_match_1 = __importDefault(require("../general/before-and-after-match"));
 var resolve_function_1 = __importDefault(require("../../functions/resolve-function"));
 var reg_exp_1 = __importDefault(require("../../padroes/reg-exp"));
@@ -46,4 +45,4 @@ var attrToObj = function (attributes) {
     }
     return props;
 };
-exports.default = attrToObj;
+module.exports = attrToObj;

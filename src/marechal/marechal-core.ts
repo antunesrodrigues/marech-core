@@ -37,4 +37,4 @@ const marechalCore = (componentHtml:string, args:ArgsType, defaultArgs:ArgsType 
   return finalComponent;
 };
 
-export default marechalCore;
+export =  marechalCore;

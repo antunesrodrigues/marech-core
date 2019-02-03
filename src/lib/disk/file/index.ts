@@ -4,7 +4,7 @@ import requireFile from './require-file';
 import createFile from './create-file';
 
 // Export
-export default {
+export =  {
   verifyFile,
   readFile,
   requireFile,

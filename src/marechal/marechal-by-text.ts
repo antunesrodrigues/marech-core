@@ -57,4 +57,4 @@ const marechalByData = (originalData:string, configs:ConfigsInterface) => {
   return finalData;
 };
 
-export default marechalByData;
+export =  marechalByData;

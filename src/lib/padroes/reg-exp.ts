@@ -14,4 +14,4 @@ const regExp:RegExpInterface = {
 
 };
 
-export default regExp;
+export =  regExp;

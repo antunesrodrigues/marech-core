@@ -51,7 +51,7 @@ const resolveConfig = (config:object, dir = './'):ConfigsInterface => {
 };
 
 // Export all
-export default {
+export =  {
   defaultNames,
 
   defaultConfigs,

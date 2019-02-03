@@ -4,4 +4,4 @@ const itens:{ [propName: string]:any; } = {
   regExp,
 };
 
-export default itens;
+export =  itens;

@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = __importDefault(require("fs"));
 var verify_path_1 = __importDefault(require("./verify-path"));
 var createPath = function (location) {
@@ -11,4 +10,4 @@ var createPath = function (location) {
     }
     return true;
 };
-exports.default = createPath;
+module.exports = createPath;

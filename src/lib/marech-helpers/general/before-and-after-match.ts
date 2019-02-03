@@ -13,4 +13,4 @@ const matchFunctions:MatchFunctionsInterface = {
   },
 };
 
-export default matchFunctions;
+export =  matchFunctions;
